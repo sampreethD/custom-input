@@ -1,0 +1,7 @@
+<form class="display-flex" [formGroup]="employeeForm" (ngSubmit)="func()">
+    <div *ngFor="let control of employeeForm.controls|objArr">
+        <app-inputwrap (input)="func()" [err]="formValidationMessage[control]['required']" [validation]=""
+            [label]="control" [formControlName]="control"></app-inputwrap>
+    </div>
+    <button mat-button color="primary" type="submit">click</button>
+</form>

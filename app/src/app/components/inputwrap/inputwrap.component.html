@@ -1,0 +1,7 @@
+
+    <mat-form-field appearance="outline">
+        <mat-label for="control">{{label}}</mat-label>
+        <input  matInput [type]="type" (input)="doInput()" (blur)="doBlur()" [name]="control" [formControl]="form"
+            matInput />
+     <mat-error>{{err}}</mat-error>
+    </mat-form-field>
